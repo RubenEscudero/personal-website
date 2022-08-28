@@ -11,10 +11,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class StatusController extends AbstractController
 {
     #[Route('/status', name: 'status', methods: ['GET'])]
-    public function login(): Response
+    public function login(): JsonResponse
     {
-        $apiVersion = 0;
-
-        return new JsonResponse($apiVersion, Response::HTTP_OK);
+        $data = [
+            'version' => $_ENV['API_VERSION'],
+        ];
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 }
