@@ -2,7 +2,6 @@
 
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\Dotenv\Dotenv;
 
 class StatusControllerTest extends WebTestCase
 {
